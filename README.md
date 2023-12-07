@@ -13,3 +13,9 @@ code: const testGame = new PigDice();
       testGame.changeTurn();
 Output: testGame.turnTotal = 0; 
         testGame.activePlayer = 1;
+
+Describe: rollDice();
+Test: "should generate a random number between 1 and 6 (inclusive on both ends) and add each number rolled to turnTotal. If a 1 is rolled, reset turnTotal to 0"
+code: testGame.rollDice();
+      testGame.roll; >1
+Output: turnTotal = 0;
