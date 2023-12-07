@@ -1,9 +1,8 @@
-function PigDice(totalScore, turnTotal, activePlayer, roll, hold) {
+function PigDice(totalScore, turnTotal, activePlayer, roll,) {
   this.totalScore = totalScore;
   this.turnTotal = turnTotal;
   this.activePlayer = activePlayer;
   this.roll = roll;
-  this.hold = hold;
 }
 PigDice.prototype.changeTurn = function () {
   this.turnTotal = 0;
@@ -16,5 +15,9 @@ PigDice.prototype.rollDice = function () {
   } else {
     this.turnTotal += this.roll;
   }
+};
+PigDice.prototype.hold = function () {
+  this.totalScore[this.activePlayer] += this.turnTotal;
+  this.changeTurn();
 };
 

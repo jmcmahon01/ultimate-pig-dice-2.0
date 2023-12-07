@@ -19,3 +19,11 @@ Test: "should generate a random number between 1 and 6 (inclusive on both ends) 
 code: testGame.rollDice();
       testGame.roll; >1
 Output: turnTotal = 0;
+
+Describe: hold();
+Test: "should keep the active player's turn total and switch active player"
+code: active player=0;
+      roll = 6;
+      turnTotal = 6; 
+      testGame.hold();
+      active player = 1 
